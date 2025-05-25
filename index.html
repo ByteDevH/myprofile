@@ -1,331 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Profile</title>
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
     <div class="nav-container">
-        <nav>
-            <a href="#" class="logo" data-text="Your Name">Hilary <span> Wong Chew Zhi</span></a>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#projects" data-text="Projects"><span>Projects</span></a></li>
-                <li><a href="#skills" data-text="Skills"><span>Skills</span></a></li>
-                <li><a href="#about" data-text="About"><span>About</span></a></li>
-                <li><a href="#contact" data-text="Contact"><span>Contact</span></a></li>
-            </ul>
-        </nav>
+      <nav>
+        <a href="#" class="logo" data-text="Your Name"
+          >Hilary <span> Wong Chew Zhi</span></a
+        >
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#projects" data-text="Projects"><span>Projects</span></a>
+          </li>
+          <li>
+            <a href="#skills" data-text="Skills"><span>Skills</span></a>
+          </li>
+          <li>
+            <a href="#about" data-text="About"><span>About</span></a>
+          </li>
+          <li>
+            <a href="#contact" data-text="Contact"><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-row">
         <div class="hero-content">
-            <h1>
-                <span>Software</span><br>
-                <span>Developer</span>
-            </h1>
-            <p class="animate-in">Software is a great combination between artistry and engineering.</p>
-            <a href="#projects" class="scroll-down animate-in">
-                <span>Scroll Down</span>
-            </a>
+          <h1>
+            <span class="title-word">Software</span><br>
+            <span class="title-word">Developer</span>
+          </h1>
+          <p class="hero-description animate-in">
+                      HILARY WONG CHEW ZHI <br />
+            Software is a great combination between artistry and engineering.
+          </p>
+          <a href="#projects" class="scroll-down animate-in">
+            <span>Scroll Down</span>
+            <div class="scroll-icon"></div>
+          </a>
         </div>
+        <div class="hero-image">
+          <img
+            src="./images/IMG_0210.JPG"
+            alt="Profile Image"
+            class="profile-img"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="projects-header">
-            <h2 class="section-title">Selected<br>Projects</h2>
-            <div class="view-controls">
-                <button class="view-toggle active" data-view="grid" aria-label="Grid view">
-                    <i class="fas fa-th"></i>
-                </button>
-                <button class="view-toggle" data-view="list" aria-label="List view">
-                    <i class="fas fa-list"></i>
-                </button>
+      <div class="projects-header">
+        <h2 class="section-title">Selected<br />Projects</h2>
+        <div class="view-controls">
+          <button
+            class="view-toggle active"
+            data-view="grid"
+            aria-label="Grid view"
+          >
+            <i class="fas fa-th"></i>
+          </button>
+          <button class="view-toggle" data-view="list" aria-label="List view">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="projects-container">
+        <!-- Grid View (Default) - Exactly 2 projects -->
+        <div class="projects-grid view-content active">
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="background-image: url('./images/mobileapp.png')"
+            >
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <h3 class="project-title">Mobile App Application</h3>
+                  <p class="project-category">Full Stack Development</p>
+                  <p class="project-description">
+                    A modern mobile application designed for seamless user
+                    experience with intuitive navigation and clean aesthetics.
+                  </p>
+                  <button
+                    class="project-link"
+                    disabled
+                    style="
+                      pointer-events: none;
+                      opacity: 0.6;
+                      cursor: not-allowed;
+                    "
+                  >
+                    Ongoing... <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="background-image: url('./images/webapp.png')"
+            >
+              <div class="project-overlay">
+                <div class="overlay-content">
+                  <h3 class="project-title">Web Application</h3>
+                  <p class="project-category">Full-Stack Development</p>
+                  <p class="project-description">
+                    A responsive web application built with modern technologies
+                    to deliver high performance across all devices.
+                  </p>
+                  <button class="project-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="projects-container">
-            <!-- Grid View (Default) - Exactly 2 projects -->
-            <div class="projects-grid view-content active">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('./images/mobileapp.png')">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3 class="project-title">Mobile App Application</h3>
-                                <p class="project-category">Full Stack Development</p>
-                                <p class="project-description">A modern mobile application designed for seamless user
-                                    experience with intuitive navigation and clean aesthetics.</p>
-                                <button class="project-link" disabled
-                                    style="pointer-events: none; opacity: 0.6; cursor: not-allowed;">Ongoing... <i
-                                        class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('./images/webapp.png')">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3 class="project-title">Web Application</h3>
-                                <p class="project-category">Full-Stack Development</p>
-                                <p class="project-description">A responsive web application built with modern
-                                    technologies to deliver high performance across all devices.</p>
-                                <button class="project-link">View Details <i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- List View -->
+        <div class="projects-list view-content">
+          <div class="project-list-item">
+            <div class="list-thumbnail">
+              <img src="./images/mobileapp.png" alt="Mobile App Design" />
             </div>
-
-            <!-- List View -->
-            <div class="projects-list view-content">
-                <div class="project-list-item">
-                    <div class="list-thumbnail">
-                        <img src="./images/mobileapp.png" alt="Mobile App Design">
-                    </div>
-                    <div class="list-content">
-                        <div class="list-text">
-                            <h3>Mobile Application</h3>
-                            <p class="project-category">Full-Stack Development</p>
-                            <p class="project-description">A modern mobile application designed for seamless user
-                                experience with intuitive navigation and clean aesthetics.</p>
-                        </div>
-                        <button class="project-link" disabled>Ongoing... <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-                <div class="project-list-item">
-                    <div class="list-thumbnail">
-                        <img src="./images/webapp.png" alt="Web Application">
-                    </div>
-                    <div class="list-content">
-                        <div class="list-text">
-                            <h3>Web Application</h3>
-                            <p class="project-category">Full-Stack Development</p>
-                            <p class="project-description">A responsive web application built with modern technologies
-                                to deliver high performance across all devices.</p>
-                        </div>
-                        <button class="project-link">View Case Study <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
+            <div class="list-content">
+              <div class="list-text">
+                <h3>Mobile Application</h3>
+                <p class="project-category">Full-Stack Development</p>
+                <p class="project-description">
+                  A modern mobile application designed for seamless user
+                  experience with intuitive navigation and clean aesthetics.
+                </p>
+              </div>
+              <button class="project-link" disabled>
+                Ongoing... <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
+          </div>
+          <div class="project-list-item">
+            <div class="list-thumbnail">
+              <img src="./images/webapp.png" alt="Web Application" />
+            </div>
+            <div class="list-content">
+              <div class="list-text">
+                <h3>Web Application</h3>
+                <p class="project-category">Full-Stack Development</p>
+                <p class="project-description">
+                  A responsive web application built with modern technologies to
+                  deliver high performance across all devices.
+                </p>
+              </div>
+              <button class="project-link">
+                View Case Study <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="container">
-            <div class="skills-header">
-                <h2 class="section-title">Technical<br>Skills</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>HTML5</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>CSS3/Sass</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>JavaScript</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>PHP</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>SQL</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Python</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>SQL</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Design & Tools</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Figma</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>AutoCAD</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Git</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Blender</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="skills-header">
+          <h2 class="section-title">Technical<br />Skills</h2>
         </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>HTML5</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>CSS3/Sass</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>JavaScript</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>PHP</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>SQL</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Python</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>SQL</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Design & Tools</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Figma</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>AutoCAD</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Git</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Blender</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="about-image">
-            <img src="./images/IMG_0220.JPG" alt="About Image">
+      <div class="about-image">
+        <img src="./images/IMG_0220.JPG" alt="About Image" />
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          I hold a degree in Computer Science from Universiti Malaysia Sabah
+          (UMS) and a diploma in Civil Engineering. With over two years of
+          experience in the tech industry and more than four years in the
+          building and road construction sector, I bring a unique blend of
+          skills across both fields.
+        </p>
+        <p>
+          As a developer, I am passionate about creating digital experiences
+          that are both beautiful and functional. I have worked on developing
+          and deploying several web applications within the government sector,
+          demonstrating my technical expertise and commitment to delivering
+          effective digital solutions.
+        </p>
+        <p>
+          In civil engineering, I have contributed to the development of
+          high-rise buildings and road maintenance projects, showcasing strong
+          project management skills and a solid technical foundation.
+        </p>
+        <p>
+          My approach combines aesthetic sensibility with technical proficiency,
+          ensuring that every project not only looks great but also performs
+          flawlessly across all devices and platforms. Additionally, I have
+          experience implementing AI-powered image processing systems,
+          highlighting my adaptability and forward-thinking mindset.
+        </p>
+        <div class="stats">
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-item">
+            <h3>2+</h3>
+            <p>Years Experience</p>
+          </div>
         </div>
-        <div class="about-content">
-            <h2>About Me</h2>
-            <p>I hold a degree in Computer Science from Universiti Malaysia Sabah (UMS) and a diploma in Civil
-                Engineering. With over two years of experience in the tech industry and more than four years in the
-                building and road construction sector, I bring a unique blend of skills across both fields.</p>
-            <p>As a developer, I am passionate about creating digital experiences that are both beautiful and
-                functional. I have worked on developing and deploying several web applications within the government
-                sector, demonstrating my technical expertise and commitment to delivering effective digital solutions.
-            </p>
-            <p>In civil engineering, I have contributed to the development of high-rise buildings and road maintenance
-                projects, showcasing strong project management skills and a solid technical foundation.</p>
-            <p>
-
-                My approach combines aesthetic sensibility with technical proficiency, ensuring that every project not
-                only looks great but also performs flawlessly across all devices and platforms. Additionally, I have
-                experience implementing AI-powered image processing systems, highlighting my adaptability and
-                forward-thinking mindset.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat-item">
-                    <h3>2+</h3>
-                    <p>Years Experience</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h2>Let's Work Together</h2>
-                <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or
-                    just want to say hi, I'll get back to you as soon as possible.</p>
-                <div class="social-links">
-                    <a href="https://github.com/ByteDevH"><i class="fab fa-github"></i></a>
-                    <!-- <a href="#"><i class="fab fa-dribbble"></i></a>
+      <div class="footer-content">
+        <div class="footer-about">
+          <h2>Let's Work Together</h2>
+          <p>
+            I'm always interested in hearing about new projects and
+            opportunities. Whether you have a question or just want to say hi,
+            I'll get back to you as soon as possible.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/ByteDevH"
+              ><i class="fab fa-github"></i
+            ></a>
+            <!-- <a href="#"><i class="fab fa-dribbble"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a> -->
-                    <a href="https://www.linkedin.com/in/hilary-w-78600920b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="link-group">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="link-group">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="mailto:hello@yourname.com">hilarywong06@gmail.com</a></li>
-                        <li><a href="tel:+1234567890">+60109461342</a></li>
-                        <li><a href="#">Papar, Sabah</a></li>
-                    </ul>
-                </div>
-            </div>
+            <a
+              href="https://www.linkedin.com/in/hilary-w-78600920b/"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
         </div>
-        <div class="copyright">
-            <p>© 2025 Hilary Wong. All rights reserved.</p>
+        <div class="footer-links">
+          <div class="link-group">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+                <a href="mailto:hello@yourname.com">hilarywong06@gmail.com</a>
+              </li>
+              <li><a href="tel:+1234567890">+60109461342</a></li>
+              <li><a href="#">Papar, Sabah</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Hilary Wong. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script src="styles.js"></script>
-</body>
-
+    <script src="./dist/styles.js"></script>
+  </body>
 </html>
