@@ -113,166 +113,203 @@ nav {
   z-index: 1001;
 }
 
-/* Enhanced Hero Section */
+/* Enhanced Hero Section - Large Web View */
 .hero {
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    rgba(5, 5, 5, 0.8) 0%,
-    rgba(10, 10, 10, 0.5) 100%
-  );
+  padding: 100px 0;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("your-hero-image.jpg") center/cover no-repeat;
-  z-index: -1;
-  opacity: 0.7;
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
 .hero-content {
-  max-width: 800px;
-  transform: translateY(20px);
-  opacity: 0;
-  animation: fadeInUp 1.2s var(--easing) 0.3s forwards;
+  flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
+/* Enhanced Text Sizes for Large Web View */
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
   overflow: hidden;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-weight: 800;
+  margin-bottom: 2rem;
 }
 
-.hero h1 span {
+.title-word {
   display: inline-block;
-  transform: translateY(30px);
+  transform: translateY(100%);
   opacity: 0;
-  animation: fadeInUp 0.8s var(--easing) forwards;
+  animation: slideUp 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  font-size: clamp(4rem, 7vw, 6.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
-.hero h1 span:first-child {
+.title-word:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.title-word:nth-child(2) {
   animation-delay: 0.5s;
 }
 
-.hero h1 span:last-child {
-  animation-delay: 0.7s;
-}
-
-.hero p {
-  font-size: clamp(1rem, 1.2rem, 1.4rem);
-  max-width: 500px;
-  margin-bottom: 2.5rem;
-  color: var(--light-gray);
+.hero-description {
   transform: translateY(20px);
   opacity: 0;
-  animation: fadeInUp 0.8s var(--easing) 0.9s forwards;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.7s;
+  max-width: 600px;
+  margin: 2rem 0 3rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.8rem);
   line-height: 1.6;
+  color: var(--light-gray);
 }
 
-.scroll-down {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Enhanced Image Section */
+.hero-image {
+  flex: 1;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9) translateX(20px);
+  opacity: 0;
+  animation: fadeInRight 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+/* Enhanced Scroll Down Button */
+.scroll-down {
+  display: inline-flex;
   align-items: center;
+  gap: 12px;
   color: var(--white);
   text-decoration: none;
-  font-size: 0.9rem;
+  transform: translateY(10px);
   opacity: 0;
-  animation: fadeIn 0.8s var(--easing) 1.2s forwards;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.9s;
+  font-size: 1.2rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .scroll-down:hover {
   color: var(--green);
+  transform: translateY(0) scale(1.05);
 }
 
-.scroll-down span {
-  margin-bottom: 10px;
+.scroll-icon {
+  width: 20px;
+  height: 32px;
+  border: 2px solid var(--green);
+  border-radius: 16px;
+  position: relative;
   transition: all 0.3s ease;
 }
 
-.scroll-down:hover span {
-  transform: translateY(-3px);
-}
-
-.scroll-down::after {
+.scroll-icon::after {
   content: "";
-  display: block;
-  width: 1px;
-  height: 60px;
-  background-color: var(--white);
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  transform: translateX(-50%);
   animation: scrollPulse 2s infinite;
 }
 
-.scroll-down:hover::after {
-  background-color: var(--green);
+/* Animation Keyframes (unchanged) */
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+@keyframes fadeInRight {
   to {
+    transform: scale(1) translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes scrollPulse {
-  0% {
-    transform: translateY(0);
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
-  100% {
-    transform: translateY(20px);
+  50% {
+    transform: translateX(-50%) translateY(10px);
     opacity: 0.5;
   }
 }
 
-/* Responsive adjustments */
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .hero {
-    padding: 0 5%;
-    min-height: 500px;
+    padding: 60px 0;
+    margin-bottom: 60px;
   }
 
-  .hero h1 {
-    font-size: clamp(2rem, 8vw, 3.5rem);
+  .hero-row {
+    flex-direction: column-reverse;
+    gap: 48px;
+    padding: 0 24px;
   }
 
-  .hero p {
-    font-size: 1rem;
+  .hero-content {
+    text-align: center;
+  }
+
+  .title-word {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin: 1.5rem auto 2rem;
+    max-width: 100%;
+  }
+  
+  h1 br {
+    display: none;
+  }
+
+  .profile-img {
+    max-width: 280px;
+    animation: fadeInUp 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    animation-delay: 0.4s;
   }
 
   .scroll-down {
-    bottom: 30px;
+    justify-content: center;
+    font-size: 1.1rem;
   }
 }
 
@@ -879,11 +916,12 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-color: var(--black);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Changed from 'center' to 'flex-end' */
+    padding-right: 30px; /* Add right padding for better spacing */
     transform: translateY(-100%);
     transition: transform 0.6s var(--easing);
   }
@@ -894,8 +932,11 @@ footer {
 
   .nav-links li {
     margin: 15px 0;
+    text-align: right; /* Align text to the right */
+    width: auto; /* Let the width be determined by content */
   }
 
+  /* Rest of your existing styles... */
   .menu-toggle {
     display: block;
     width: 30px;
